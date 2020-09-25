@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="tooltip.css" />
+
+</head>
+
+<body>
+  <button id="topleft">1</button>
+  <button id="topright">2</button>
+  <button id="botleft">3</button>
+  <button id="botright">4</button>
+
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+  <script>
+    tippy("#topleft", {
+      content: "1st button",
+      animation: "scale",
+      theme: "blue",
+    });
+
+    tippy("#topright", {
+      content: "2nd button",
+      animation: "scale",
+      theme: "light",
+    });
+    tippy("#botleft", {
+      content: "3rd button",
+      animation: "scale",
+      theme: "light",
+    });
+    tippy("#botright", {
+      content: "4th button",
+      animation: "scale",
+      theme: "blue",
+    });
+  </script>
+</body>
+
+</html>

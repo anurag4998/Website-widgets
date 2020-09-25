@@ -1,0 +1,40 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#topleft
+{
+    position: fixed;
+    top: 0;
+    left: 0 ;
+}
+
+
+#topright
+{
+    position: fixed;
+    top: 0;
+    right: 0 ;
+}
+#botleft
+{
+    position: fixed;
+    bottom: 0;
+    left: 0 ;
+}
+#botright
+{
+    position: fixed;
+    bottom: 0;
+    right: 0 ;
+}
+
+.tippy-box[data-theme~='blue'] {
+    background-color: #0f2862;
+    color: floralwhite;
+  }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./node_modules/intro.js/introjs.css"
+    />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .forLastStep {
+        background-color: #0f2862;
+        color: floralwhite;
+      }
+      .introjs-prevbutton {
+        background-color: orange;
+        color: floralwhite;
+        text-shadow: none;
+        background-image: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body style="font-family: Roboto, sans-serif">
+    <nav id="nav" style="height: 20vh; background-color: blue"></nav>
+    <div
+      id="first"
+      style="background-color: rgb(197, 29, 29); margin-top: 10px; color: white"
+    >
+      first
+    </div>
+
+    <div
+      id="second"
+      data-step="2"
+      data-intro="Ok, wasn't that fun?"
+      style="background-color: yellow; margin-top: 10px; color: white"
+    >
+      second
+    </div>
+    <div
+      id="third"
+      data-step="3"
+      data-tooltipclass="forLastStep"
+      data-intro="Ok, wasn't that fun?"
+      style="background-color: green; margin-top: 10px; color: white"
+    >
+      third
+    </div>
+    <button onclick="startdemo()">Demo</button>
+    <script src="./node_modules/intro.js/intro.js"></script>
+    <script>
+      const startdemo = () => {
+        const introguide = introJs();
+        introguide.setOptions({
+          steps: [
+            {
+              element: document.querySelector("window"),
+              intro:
+                "This guided tour will explain the InfiIOT dashboard  interface.<br><br>Use the arrow keys for navigation or hit ESC to exit the tour immediately.",
+              position: "left",
+            },
+
+            {
+              element: document.querySelector("#first"),
+              intro: "This is a div.",
+            },
+
+            {
+              element: document.querySelector("#second"),
+              intro: "This is another div.",
+            },
+
+            {
+              element: document.querySelector("#third"),
+              intro: "This is yet another div.",
+            },
+          ],
+
+          showStepNumbers: false,
+          overlayOpacity: 0.5,
+          scrollToElement: true,
+          showProgress: true,
+        });
+
+        introguide.start();
+      };
+    </script>
+  </body>
+</html>
